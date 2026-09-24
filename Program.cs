@@ -4,7 +4,7 @@ builder.Services.AddCors(options =>
     {
         options.AddDefaultPolicy( policity =>
             {
-                policity
+                policy
                     .AllowAnyOrigin()
                     .AllowAnyHeader()
                     .AllowAnyMethod();
@@ -39,5 +39,5 @@ app.MapGet("/api/polleria",() =>
     });
 });
 
-var port = Environment.GetEnvironmentVariable("Port")??"10000";
+var port = Environment.GetEnvironmentVariable("PORT")??"10000";
 app.Run($"http://0.0.0.0:{port}");
