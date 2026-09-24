@@ -4,7 +4,7 @@ builder.Services.AddCors(options =>
     {
         options.AddDefaultPolicy( policity =>
             {
-                policy
+                policity
                     .AllowAnyOrigin()
                     .AllowAnyHeader()
                     .AllowAnyMethod();
